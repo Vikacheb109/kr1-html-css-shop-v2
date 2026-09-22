@@ -2,13 +2,26 @@
 * {
     box-sizing: border-box;
 }
+:root{
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --line-color: #dbdbdba2;
+    --btn-color: #163278;
+    --btn-color-hover: #1a41ace3;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
-    color: #1a1a1a;
-    background: #ffffff;
+    color: var(--text-color);
+    background: var(--bg-color);
 }
+
 
 a {
     text-decoration: none;
@@ -27,8 +40,8 @@ img {
 
 
 .site-header {
-    border-bottom: 1px solid #ececec;
-    background: #fff;
+    border-bottom: 2px solid var(--line-color);
+    background: var(--bg-color);
 }
 
 .site-header__inner {
@@ -44,22 +57,26 @@ img {
     font-size: 22px;
     font-weight: 700;
     letter-spacing: 0.5px;
-    color: #1a1a1a;
+    color: var(--text-color);
 }
 
 .nav-list__header {
     display: flex;
     align-items: center;
-    gap: 36px;
+    gap:50px;
 }
 
 .nav-catalog__item a {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
     font-size: 15px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .nav-catalog__item a:hover {
-    color: #2f6bff;
+    color: var(--bg-color);
+    background-color: var(--btn-color);
 }
 
 .nav-catalog__item.icon a {
@@ -71,27 +88,27 @@ img {
 .main-info-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 40px 40px;
+    padding: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 60px;
+    background-color: #f0f0f0;
 }
 
 .main-info-section__title h3 {
-    margin: 0 0 28px;
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1.15;
-    color: #1a1a1a;
+    color: var(--text-color);
     max-width: 460px;
 }
 
 .main-button-catalog {
     display: inline-block;
     padding: 14px 28px;
-    background: #2f6bff;
-    color: #fff;
+    background: var(--btn-color);
+    color: var(--bg-color);
     font-size: 16px;
     font-weight: 600;
     border: none;
@@ -100,27 +117,48 @@ img {
 }
 
 .main-button-catalog:hover {
-    background: #1f4fd0;
+    background: var(--btn-color-hover);
 }
 
 .main-info-section__image {
-    max-width: 480px;
+    max-width: 400px;
     width: 100%;
     height: auto;
+    margin-left: auto;
+    object-fit: contain;
 }
+
+
+
+
+.main-catalog-section{
+    max-width: 1200px;
+    padding: 20px 40px 0;
+
+}
+
+.main-catalog-section h2{
+    margin: 0 0 24px;
+    font-size: 30px;
+    color: var(--text-color);
+}
+
+
 
 .catalog-product-cards {
     max-width: 1200px;   
     margin: 0 auto;
-    padding: 20px 10px 60px;
+    padding: 10px 10px 60px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);  
     gap: 20px;
+
+    border-bottom: var(--line-color);
 }
 
 .product-cards {
-    background: #fff;
-    border: 1px solid #ececec;
+    background: var(--bg-color);
+    border: 1px solid var(--line-color);
     border-radius: 14px;
     padding: 24px 16px;
     text-align: center;
@@ -129,7 +167,6 @@ img {
 
 .product-cards:hover {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    transform: translateY(-2px);
 }
 
 .product-cards img {
@@ -143,31 +180,43 @@ img {
     margin: 0;
     font-size: 16px;
     font-weight: 600;
-    color: #1a1a1a;
+    color: var(--text-color);
 }
 
 
-.cards-character__table {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px 60px;
-}
 
-.cards-character__table table {
-    width: 100%;
-    border-collapse: collapse;
-}
 
 
 footer {
-    border-top: 1px solid #ececec;
+    border-top: 1px solid var(--line-color);
     padding: 30px 40px;
     text-align: center;
     color: #777;
     font-size: 14px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
 }
 
-footer p {
-    margin: 4px 0;
+
+
+
+.product-card__button{
+    color: var(--bg-color);
+    padding: 10px 20px;
+    background: var(--btn-color);
+    color: var(--bg-color);
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.product-card__button:hover{
+    background: var(--btn-color-hover);
 }
 
+
+.cards-character__table{
+    
+}
