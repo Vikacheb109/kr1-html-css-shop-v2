@@ -5,29 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Учебный интернет магазин</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <header class="site-header">
         <div class="site-header__inner">
-            <div class="nav-logo"></div>
+            <div class="nav-logo">Shop SPA</div>
             <ul class="nav-list__header">
-                <li class="nav-catalog__item"><a href="#catalog">Главная</a></li>
-                <li class="nav-catalog__item"><a href="">Каталог</a></li>
-                <li class="nav-catalog__item"><a href="">О нас</a></li>
+                <li class="nav-catalog__item"><a href="index.html">Главная</a></li>
+                <li class="nav-catalog__item"><a href="catalog.html">Каталог</a></li>
+                <li class="nav-catalog__item"><a href="#about">О нас</a></li>
                 <li class="nav-catalog__item"><a href="contacts.html">Контакты</a></li>
-                <li class="nav-catalog__item icon"></li>
+                <li class="nav-catalog__item icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
             </ul>
         </div>
     </header>
 
-    <main class="">
-        <section class="main-info-section">
-            <div class="main-info-section__title">
-                <h3>Большой каталог товаров для вашего комфорта</h3>
-                <button class="main-button-catalog">Перейти в каталог</button>
-            </div>
-        </section>
+    
+    <section class="main-info-section">
+        <div class="main-info-section__title">
+            <h3>Большой каталог товаров для вашего комфорта</h3>
+            <a href="#catalog" class="main-button-catalog">Перейти в каталог</a>
+        </div>
+        <img src="images/image (2).png" class="main-info-section__image">
+    </section>
 
+    <main class="">
         <section class="main-catalog-section" id="catalog">
             <h2>Каталог</h2>
 
@@ -60,21 +63,100 @@
                     <p>Цена</p>
                     <button class="button product-card__button" type="button">Заказать</button>
                 </div>
+
+                <div class="product-cards">
+                    <h3>Мерседес</h3>
+                    <p>Описание</p>
+                    <p>Цена</p>
+                    <button class="button product-card__button" type="button">Заказать</button>
+                </div>
+
+                <div class="product-cards">
+                    <h3>Мерседес</h3>
+                    <p>Описание</p>
+                    <p>Цена</p>
+                    <button class="button product-card__button" type="button">Заказать</button>
+                </div>
+
+                <div class="product-cards">
+                    <h3>Мерседес</h3>
+                    <p>Описание</p>
+                    <p>Цена</p>
+                    <button class="button product-card__button" type="button">Заказать</button>
+                </div>
+
+                <div class="product-cards">
+                    <h3>Мерседес</h3>
+                    <p>Описание</p>
+                    <p>Цена</p>
+                    <button class="button product-card__button" type="button">Заказать</button>
+                </div>
             </div>
 
         </section>
 
         <section class="cards-character__table">
+            <h2>Таблица товаров</h2>
             <table>
-
+                <thead>
+                    <tr>
+                        <th>Товар</th>
+                        <th>Категория</th>
+                        <th>Цена</th>
+                        <th>В наличии</th>
+                        <th>Рейтинг</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Мерседес</td>
+                        <td>Автомобили</td>
+                        <td>3 500 000 ₽</td>
+                        <td>Да</td>
+                        <td>4.8</td>
+                    </tr>
+                    <tr>
+                        <td>Наушники</td>
+                        <td>Электроника</td>
+                        <td>8 990 ₽</td>
+                        <td>Да</td>
+                        <td>4.5</td>
+                    </tr>
+                    <tr>
+                        <td>Часы</td>
+                        <td>Аксессуары</td>
+                        <td>12 500 ₽</td>
+                        <td>Нет</td>
+                        <td>4.2</td>
+                    </tr>
+                    <tr>
+                        <td>Рюкзак</td>
+                        <td>Аксессуары</td>
+                        <td>3 200 ₽</td>
+                        <td>Да</td>
+                        <td>4.7</td>
+                    </tr>
+                    <tr>
+                        <td>Кроссовки</td>
+                        <td>Обувь</td>
+                        <td>7 800 ₽</td>
+                        <td>Да</td>
+                        <td>4.6</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
+
+        <section class="about-us" id="about">
+
+        </section>
+
     </main>
 
     <footer id="contacts">
-        <p></p>
-        <p></p>
-    </footer>
+        <p>© 2026 Shop SPA</p>
+        <p>+0 (000) 000-00-00</p>
+</footer>
 
 </body>
 </html>
