@@ -119,6 +119,10 @@ img {
 .main-button-catalog:hover {
     background: var(--btn-color-hover);
 }
+.main-button-catalog:focus-visible {
+    outline: 2px solid var(--btn-color);
+    outline-offset: 3px;
+}
 
 .main-info-section__image {
     max-width: 400px;
@@ -184,24 +188,6 @@ img {
 }
 
 
-
-
-
-footer {
-    border-top: 1px solid var(--line-color);
-    padding: 30px 40px;
-    text-align: center;
-    color: #777;
-    font-size: 14px;
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-
 .product-card__button{
     color: var(--bg-color);
     padding: 10px 20px;
@@ -218,5 +204,85 @@ footer {
 
 
 .cards-character__table{
+    max-width: 1200px;
+    padding: 40px;
+}
+
+.cards-character__table caption{
+    padding: 14px 28px;
+    background: var(--btn-color);
+    color: var(--bg-color);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+}
+.table-wrap{
+    border: 1px solid var(--line-color);
+    border-radius: 10px;
+}
+
+.cards-character__table table {
+    width: 100%;
+}
+.cards-character__table th, .cards-character__table td{
+    padding: 14px 18px;
+    text-align: center;
+    border-bottom: 1px solid var(--line-color);
+}
+
+footer {
+    border-top: 1px solid var(--line-color);
+    padding: 30px 40px;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+/*контакты*/
+.section-contacts{
+    margin: 30px 40px;
+}
+.contacts-info-container{
+    padding-bottom: 40px;
+    border-bottom: 3px solid var(--btn-color);
+    width: 100%;
+}
+
+.contacts-list{
+ 
+}
+
+
+/*about us*/
+
+.about-us{
+    max-width: 1200px;
+    padding: 40px;
+}
+
+.about-info-container{
+    display: flex;
+    align-items: center;
     
+    text-align: right;
+    gap: 60px;
+}
+.about-info-container__inner h3{
+    color: var(--text-color);
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 16px;
+}
+.about-info-container img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-info-image{
+    max-width: 260px;
 }
