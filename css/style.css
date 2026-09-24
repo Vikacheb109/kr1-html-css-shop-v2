@@ -8,6 +8,7 @@
     --line-color: #dbdbdba2;
     --btn-color: #163278;
     --btn-color-hover: #1a41ace3;
+    --bg-color-2: #f4f4f4;
 
 }
 
@@ -138,7 +139,7 @@ img {
 .main-catalog-section{
     max-width: 1200px;
     padding: 20px 40px 0;
-
+    margin: 0 auto; /*для центрирования*/
 }
 
 .main-catalog-section h2{
@@ -154,10 +155,10 @@ img {
     margin: 0 auto;
     padding: 10px 10px 60px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);  
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));  
     gap: 20px;
 
-    border-bottom: var(--line-color);
+    border-bottom: 1px solid var(--line-color);
 }
 
 .product-cards {
@@ -175,9 +176,11 @@ img {
 
 .product-cards img {
     margin: 0 auto 16px;
-    height: 90px;
-    width: auto;
-    object-fit: contain;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+
 }
 
 .product-cards h3 {
@@ -206,6 +209,8 @@ img {
 .cards-character__table{
     max-width: 1200px;
     padding: 40px;
+    background-color: var(--bg-color-2);
+    margin: 0 auto;
 }
 
 .cards-character__table caption{
@@ -242,18 +247,29 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+
 /*контакты*/
 .section-contacts{
     margin: 30px 40px;
 }
-.contacts-info-container{
+.contacts-info-container__inner{
     padding-bottom: 40px;
-    border-bottom: 3px solid var(--btn-color);
+    
     width: 100%;
 }
-
-.contacts-list{
- 
+.contacts-info-container{
+    display: flex;
+    gap: 50px;
+    border-bottom: 3px solid var(--btn-color);
+}
+.yandex-cart__contacts{
+    padding-bottom: 60px;
+    height: 500px;
+    width: 500px;
+}
+iframe{
+    border-radius: 30px;
 }
 
 
@@ -262,6 +278,8 @@ footer {
 .about-us{
     max-width: 1200px;
     padding: 40px;
+    border-bottom: 1px solid var(--line-color);
+    margin: 0 auto;
 }
 
 .about-info-container{
@@ -285,4 +303,43 @@ footer {
 
 .about-info-image{
     max-width: 260px;
+}
+
+
+
+.aside-info{
+    max-width: 1200px;
+    padding: 40px;
+    margin: 20px auto;
+    color: var(--text-color);
+
+    border-radius: 30px;
+    border:  3px solid var(--btn-color);
+}
+
+
+/*Модальное окно*/
+.order-dialog{
+    height: 90vh;
+    padding: 30px;
+
+    border-radius: 30px;
+    border: 3px solid var(--btn-color);
+}
+
+.order-dialog input,
+.order-dialog button{
+    border-radius: 10px;
+    border: 2px solid var(--line-color);
+    margin: 5px;
+    padding: 9px;
+
+    background-color: var(--bg-color);
+}
+
+.order-dialog button:hover{
+    background-color: var(--bg-color-2);
+}
+.order-dialog h2{
+    border-bottom: 2px solid var(--btn-color);
 }
