@@ -11,13 +11,16 @@
     <header class="site-header">
         <div class="site-header__inner">
             <div class="nav-logo">Shop SPA</div>
-            <ul class="nav-list__header">
-                <li class="nav-catalog__item"><a href="index.html">Главная</a></li>
-                <li class="nav-catalog__item"><a href="catalog.html">Каталог</a></li>
-                <li class="nav-catalog__item"><a href="#about">О нас</a></li>
-                <li class="nav-catalog__item"><a href="contacts.html">Контакты</a></li>
-                <li class="nav-catalog__item icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
-            </ul>
+            <nav>
+                    <ul class="nav-list__header">
+                        <li class="nav-catalog__item"><a href="index.html">Главная</a></li>
+                        <li class="nav-catalog__item"><a href="catalog.html">Каталог</a></li>
+                        <li class="nav-catalog__item"><a href="#about">О нас</a></li>
+                        <li class="nav-catalog__item"><a href="contacts.html">Контакты</a></li>
+                        <li class="nav-catalog__item icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+                    </ul>
+            </nav>
+
         </div>
     </header>
 
@@ -37,56 +40,64 @@
             <div class="catalog-product-cards">
 
                 <div class="product-cards">
-                    <h3>Мерседес</h3>
+                    <img src="images/Airpods Max (product poster design).jpg" alt="">
+                    <h3>Наушники</h3>
                     <p>Описание</p>
                     <p>Цена</p>
                     <button class="button product-card__button" type="button">Заказать</button>
                 </div>
                 
                 <div class="product-cards">
-                    <h3>Мерседес</h3>
+                    <img src="images/Playstation 5 by Sony Poster Design.jpg" alt="">
+                    <h3>Игровая приставка</h3>
                     <p>Описание</p>
                     <p>Цена</p>
                     <button class="button product-card__button" type="button">Заказать</button>
                 </div>
 
                 <div class="product-cards">
-                    <h3>Мерседес</h3>
+                    <img src="images/Беспроводной контроллер DualSence Playstation 5.jpg" alt="">
+                    <h3>Контроллер</h3>
                     <p>Описание</p>
                     <p>Цена</p>
                     <button class="button product-card__button" type="button">Заказать</button>
                 </div>
 
                 <div class="product-cards">
-                    <h3>Мерседес</h3>
+                    <img src="images/Graphic Design Portfolio_ Footwear Typography Poster for US Brands.jpg" alt="">
+                    <h3>Кроссовки</h3>
                     <p>Описание</p>
                     <p>Цена</p>
                     <button class="button product-card__button" type="button">Заказать</button>
                 </div>
 
                 <div class="product-cards">
-                    <h3>Мерседес</h3>
+                    <img src="images/ДухиГолубые.jpg" alt="">
+                    <h3>Духи</h3>
                     <p>Описание</p>
                     <p>Цена</p>
                     <button class="button product-card__button" type="button">Заказать</button>
                 </div>
 
                 <div class="product-cards">
-                    <h3>Мерседес</h3>
+                    <img src="images/ДухиНаВоде.jpg" alt="">
+                    <h3>Духи</h3>
                     <p>Описание</p>
                     <p>Цена</p>
                     <button class="button product-card__button" type="button">Заказать</button>
                 </div>
 
                 <div class="product-cards">
-                    <h3>Мерседес</h3>
+                    <img src="images/БлюДеШанел.jpg" alt="">
+                    <h3>Духи</h3>
                     <p>Описание</p>
                     <p>Цена</p>
                     <button class="button product-card__button" type="button">Заказать</button>
                 </div>
 
                 <div class="product-cards">
-                    <h3>Мерседес</h3>
+                    <img src="images/Без названия.jpg" alt="">
+                    <h3>Кроссовки</h3>
                     <p>Описание</p>
                     <p>Цена</p>
                     <button class="button product-card__button" type="button">Заказать</button>
@@ -150,6 +161,98 @@
             </div>
         </section>
 
+        <div>
+            <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+                <h2 id="order-dialog-title">Оформление заявки</h2>
+
+                    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+                        <input id="selected-product" name="selected-product" type="hidden">
+
+                        <div class="form-field">
+                            <label for="order-name">Имя</label>
+                            <input
+                                id="order-name"
+                                name="name"
+                                type="text"
+                                placeholder="Введите ваше имя"
+                                minlength="2"
+                                autocomplete="given-name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-field">
+                        <label for="order-email">E-mail</label>
+                        <input
+                            id="order-email"
+                            name="email"
+                            type="email"
+                            placeholder="example@mail.ru"
+                            autocomplete="email"
+                            required
+                        >
+                        </div>
+
+                        <div class="form-field">
+                        <label for="order-phone">Телефон</label>
+                        <input
+                            id="order-phone"
+                            name="phone"
+                            type="tel"
+                            inputmode="tel"
+                            placeholder="+7 (900) 000-00-00"
+                            pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+                            required
+                        >
+                        </div>
+
+                        <div class="form-field">
+                        <label for="order-date">Дата связи</label>
+                        <input
+                            id="order-date"
+                            name="date"
+                            type="date"
+                        >
+                        </div>
+
+                        <div class="form-field">
+                        <label for="order-comment">Комментарий</label>
+                        <textarea
+                            id="order-comment"
+                            name="comment"
+                            rows="4"
+                            placeholder="Укажите дополнительную информацию"
+                        ></textarea>
+                        </div>
+
+                        <label for="order-file">Прикрепить файл</label>
+                        <input
+                            id="order-file"
+                            name="file"
+                            type="file"
+                        >
+
+                        <div class="form-field form-field--checkbox">
+                        <label>
+                            <input
+                            id="order-agreement"
+                            name="agreement"
+                            type="checkbox"
+                            required
+                            >
+                            Я согласен на обработку данных
+                        </label>
+                        </div>
+
+                        <div class="form-actions">
+                        <button type="button" id="close-order-dialog">Закрыть</button>
+                        <button type="submit">Отправить заявку</button>
+                        </div>
+                    </form>
+                </dialog>
+        </div>
+
+
         <section class="about-us" id="about">
             <div class="about-info-container">
 
@@ -166,12 +269,19 @@
             </div>
         </section>
 
+            <aside class="aside-info">
+                <h2>Информация для студентов</h2>
+                <p>На следующих практических занятиях этот проект будет расширяться</p>
+            </aside>
+
+
     </main>
+
 
     <footer id="contacts">
         <p>© 2026 Shop SPA</p>
         <p>+0 (000) 000-00-00</p>
     </footer>
-
+    <script src="js/main.js"></script>
 </body>
 </html>
